@@ -30,7 +30,9 @@ var wolf = "<p>Wolves do not make good guard dogs because they are naturally afr
 var zebra = "<p>Fighting between the males involves a lot of kicking and biting until the one or the other gives up. once the previous male is forced out the new dominant male will often kill all young foals that are still dependant on their mother's milk by kicking and biting or drowning them to death.</p>"
 
 
-
+$('.container').click(function(e){
+        $(this).focus();
+    });
 
 document.onkeyup = function(event) {
   // alert("button was pressed")
