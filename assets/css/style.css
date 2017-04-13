@@ -1,0 +1,13 @@
+body {
+	background-image: url("../images/tree_of_life.jpg");
+}
+
+.card {
+	margin-top: .5em;
+	padding: 2px;
+	height: 120px;
+}
+
+.card-title {
+	padding: 5px;
+}
