@@ -88,7 +88,7 @@ function underscore(word) {
 function guess(letter) {
   var guessedindex = alphabet.indexOf(letter);
   if (guessedindex === -1) {
-    alert("You have used this letter, pick the new letter not "+letter.charCodeAt(0));
+    alert("You have used this letter, pick the new letter not "+letter.charCodeAt());
     return false;
   } else {
     delete alphabet[guessedindex];
