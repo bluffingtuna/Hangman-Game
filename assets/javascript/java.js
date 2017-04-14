@@ -36,7 +36,8 @@ $('.container').click(function(e){
 
 document.onkeyup = function(event) {
   // alert("button was pressed")
-  letter = event.key; //I don't know why but it wasn't working when var was infront of it
+  letter = event.which; //I don't know why but it wasn't working when var was infront of it
+  console.log(letter)
   var truty = guess(letter);
   console.log(rand_word);
   console.log(letter);
@@ -88,7 +89,7 @@ function underscore(word) {
 function guess(letter) {
   var guessedindex = alphabet.indexOf(letter);
   if (guessedindex === -1) {
-    alert("You have used this letter, pick the new letter not "+letter.charCodeAt());
+    alert("You have used this letter, pick the new letter not "+letter);
     return false;
   } else {
     delete alphabet[guessedindex];
