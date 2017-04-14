@@ -34,10 +34,9 @@ $('.container').click(function(e){
         $(this).focus();
     });
 
-document.onkeyup = function(event) {
+$(".container").on('keyup touchend', function(event) {
   // alert("button was pressed")
-  letter = event.which; //I don't know why but it wasn't working when var was infront of it
-  console.log(letter)
+  letter = event.key; //I don't know why but it wasn't working when var was infront of it
   var truty = guess(letter);
   console.log(rand_word);
   console.log(letter);
@@ -77,7 +76,7 @@ document.onkeyup = function(event) {
   document.getElementById("winsID").innerHTML = wins;
   document.getElementById("lossesID").innerHTML = losses;
 
-}
+});
 
 function underscore(word) {
   hidden = []
@@ -89,7 +88,7 @@ function underscore(word) {
 function guess(letter) {
   var guessedindex = alphabet.indexOf(letter);
   if (guessedindex === -1) {
-    alert("You have used this letter, pick the new letter not "+letter);
+    alert("You have used this letter, pick the new letter not "+letter.charCodeAt(0));
     return false;
   } else {
     delete alphabet[guessedindex];
