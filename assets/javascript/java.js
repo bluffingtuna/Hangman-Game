@@ -34,7 +34,7 @@ $('.container').click(function(e){
         $(this).focus();
     });
 
-$(".container").on('keyup touchend', function(event) {
+document.onkeyup = function(event) {
   // alert("button was pressed")
   letter = event.key; //I don't know why but it wasn't working when var was infront of it
   var truty = guess(letter);
@@ -76,7 +76,7 @@ $(".container").on('keyup touchend', function(event) {
   document.getElementById("winsID").innerHTML = wins;
   document.getElementById("lossesID").innerHTML = losses;
 
-});
+}
 
 function underscore(word) {
   hidden = []
